@@ -1,0 +1,4 @@
+.env
+__pycache__/
+*.pyc
+orders_0520.db
