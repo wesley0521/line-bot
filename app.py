@@ -18,6 +18,7 @@ from linebot.v3.webhooks import(
     TextMessageContent
 )
 from model import init_db, insert_order
+from model_2 import insert_order_to_supabase
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -89,7 +90,12 @@ def handle_message(event):
             profile = line_bot_api.get_profile(user_id)
             user_name = profile.display_name
 
-            insert_order(
+            # insert_order(
+            #     user_id, user_name,
+            #     cheese, financier_original, financier_choco, financier_tea, pudding,
+            #     payment, pickup_date, pickup_time, pickup_location
+            # )
+            insert_order_to_supabase(
                 user_id, user_name,
                 cheese, financier_original, financier_choco, financier_tea, pudding,
                 payment, pickup_date, pickup_time, pickup_location
