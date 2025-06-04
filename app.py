@@ -612,7 +612,7 @@ def handle_message(event):
             )
         )
     elif text == "菜單":
-        menu_url = "https://line-bot-hzlc.onrender.com\static\pictures\menu.jpg"
+        menu_url = "https://line-bot-hzlc.onrender.com/static/pictures/menu.jpg"
         line_bot_api.reply_message(
             ReplyMessageRequest(
                 replyToken=event.reply_token,
@@ -626,7 +626,7 @@ def handle_message(event):
 帳號:0081680011444411
 亦可輸入手機號碼:0911881603
 或是掃描下面的QRcode"""
-       payment_account_url = "https://line-bot-hzlc.onrender.com\static\pictures\QrCode.jpg"
+       payment_account_url = "https://line-bot-hzlc.onrender.com/static/pictures/QrCode.jpg"
        line_bot_api.reply_message(
             ReplyMessageRequest(
                 replyToken=event.reply_token,
@@ -634,7 +634,7 @@ def handle_message(event):
             )
         )
     elif text == "當月製作時間表":
-            month_make_time_url = "https://line-bot-hzlc.onrender.com\static\pictures\june.jpg"
+            month_make_time_url = "https://line-bot-hzlc.onrender.com/static/pictures/june.jpg"
             line_bot_api.reply_message(
                  ReplyMessageRequest(
                      replyToken=event.reply_token,
